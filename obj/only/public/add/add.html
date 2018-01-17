@@ -214,14 +214,19 @@
 版权所有 © 2005-2018 上海商派软件有限公司，并保留所有权利。</div>
 		</div>
 	</body>
-<script type="text/javascript" src="../js/jquery-1.11.3.js" ></script>
-<script type="text/javascript" src="../js/add.js" ></script>
+<script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
+<script type="text/javascript" src="js/add.js" ></script>
 <script type="text/javascript">
 	function add() {
 		$.ajax({
 			url:"/api/add4ajax",
 			type:"post",
 			data:{
+				goods_name_01: $("#goods_name_01").val(),
+				goods_sn: $("#goods_sn").val(),
+				shop_price: $("#shop_price").val()
+			},
+			success: function() {
 				
 			}
 		});
